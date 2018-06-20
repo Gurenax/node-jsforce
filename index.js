@@ -4,7 +4,7 @@ require('dotenv').config()
 const conn = new jsforce.Connection({
   clientId : process.env.CONSUMER_KEY,
   clientSecret : process.env.CONSUMER_SECRET,
-  redirectUri: 'https://localhost:3000/oauth/_callback'
+  redirectUri: process.env.CALLBACK_URL
 })
 
 const run = async() => {
